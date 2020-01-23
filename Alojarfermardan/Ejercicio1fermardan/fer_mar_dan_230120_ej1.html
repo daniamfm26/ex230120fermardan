@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen 23-01-2020 / fermardan / Ej</title>
+    <link rel="stylesheet" href="../css/Estilos1fermardan.css">
+    <script>
+        function almacenamiento() {
+
+            if (typeof (Storage) !== "undefined") {
+                if (localStorage.cuentadeclicks) {
+                    localStorage.cuentadeclicks = Number(localStorage.cuentadeclicks) + 30;
+
+                } else {
+
+                    localStorage.cuentadeclicks = 0;
+                }
+                document.getElementById("elementoAlmacen").innerHTML = "Has hecho clic en el botón: "
+                    + localStorage.cuentadeclicks + " veces en esta sesión.";
+            } else {
+                document.getElementById("elementoAlmacen").innerHTML =
+                    "El navegador no soporta almacenamiento local";
+            }
+        }
+
+        function almacenamiento2() {
+            if (typeof (Storage) !== "undefined") {
+                if (sessionStorage.cuentadeclicks) {
+                    sessionStorage.cuentadeclicks = Number(sessionStorage.cuentadeclicks) + 7;
+                } else {
+                    sessionStorage.cuentadeclicks = 0;
+                }
+                document.getElementById("elementoAlmacen2").innerHTML = "Has hecho clic en el botón: "
+                    + sessionStorage.cuentadeclicks + " veces en esta sesión.";
+            } else {
+                document.getElementById("elementoAlmacen2").innerHTML =
+                    "El navegador no soporta almacenamiento local";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <header class="cabecerafermardan">
+        <h1 class="cabecerafermardan__h1fermardan">Inicio del examen 23-01-2020. Alumno: fermardan</h1>
+
+        <img class="cabecerafermardan__imagencentradafermardan" src="../Recursos/Recurso1.png"
+            alt="Imagen editada por fermardan">
+
+        <a  rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <img class="cabecerafermardan__imagencentradafermardan" alt="Licencia Creative Commons"
+                style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+        </a><br />Estaobra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative
+            Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
+        </a>.
+
+    </header>
+    <main>
+        <div class="contenedorfermardan__fermardanContenedor1ConBordeVerde ">
+            <picture>
+                <source media="(min-width:500px)" srcset="../Recursos/Recurso2.jpg">
+                <source media="(min-width:400px)" srcset="../Recursos/Recurso3.jpg">
+                <img src="../Recursos/Recurso4.jpg" alt="Imagen retrocompatible">
+            </picture>
+        </div>
+        <div class="contenedorfermardan__fermardanContenedor2ConBordeAzul ">
+            <button onclick="almacenamiento()" type="button"
+                class="contenedorfermardan__fermardanContenedor2ConBordeAzul__botonfermadan ">Haz clic aquí</button>
+            <p class="textofermardan" id="elementoAlmacen"></p>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor2fermardan">
+            <div class="contenedor2fermardan__contenedorbotonfermardan">
+                <button onclick="almacenamiento2()"
+                    class="contenedor2fermardan__contenedorbotonfermardan__botonimagenfermardan ">Haz click aquí
+                    nuevamente</button>
+                <div class=".contenedor2fermardan__contenedorbotonfermardan__texto2fermardan" id="elementoAlmacen2"></div>
+            </div>
+            <div class="contenedor2fermardan__contenedoraudiofermardan">
+                <audio id="audio">
+                    <source src="../Recursos/Recurso7.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="document.getElementById('audio').restart()">Reiniciar el audio</button>
+            </div>
+            <div class="contenedor2fermardan__contenedorenlacefermardan">
+                <a href="fer_mar_dan_230120_ej2.html">Ejercicio 2</a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
